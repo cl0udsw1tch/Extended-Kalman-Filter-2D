@@ -1,11 +1,6 @@
-import os
-import scipy
 import numpy as np
-import sklearn
-import matplotlib.pyplot as plt
-from scipy.linalg import lu, solve
 import sympy as sp
-from sympy import Matrix, Function, symbols, init_printing, cos, sin, sqrt, atan2, latex, diag, eye
+from sympy import Matrix, symbols
 from sympy.utilities.lambdify import lambdify
 
 
@@ -47,7 +42,6 @@ class EKF:
         self.om_var = dataset["om_var"].item()
         
     
-
 
 
     def wrap_to_pi(self, angle):
